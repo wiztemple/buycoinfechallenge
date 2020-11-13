@@ -1,0 +1,22 @@
+{
+  "name": "buycoinfechallenge",
+  "version": "1.0.0",
+  "description": "BuyCoin Africa FE Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wiztemple/buycoinfechallenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wiztemple/buycoinfechallenge/issues"
+  },
+  "homepage": "https://github.com/wiztemple/buycoinfechallenge#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}

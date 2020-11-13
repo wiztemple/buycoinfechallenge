@@ -36,6 +36,12 @@
         </div>
         <div class="nav-menu">
           <div class="nav-left">
+            <div class="nav-item">
+              <div class="nav-search">
+                <input class="input small-input navbar-search" placeholder="Search or jump to.." />
+                <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="search" />
+              </div>
+            </div>
             <a href="#" class="nav-link">
               Pull Requests
             </a>
@@ -50,7 +56,7 @@
             </a>
           </div>
           <div class="nav-right">
-            <!-- <div class="nav-item">Kraft Alpha is out!</div> -->
+
             <a href="#" class="nav-link">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -108,8 +114,7 @@
           <div class="navtab-child">
             <a href="#">
               <span class="span-svg">
-                <svg class="octicon octicon-project UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16"
-                  version="1.1" width="16" aria-hidden="true">
+                <svg class="hide-sm" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true">
                   <path fill-rule="evenodd"
                     d="M1.75 0A1.75 1.75 0 000 1.75v12.5C0 15.216.784 16 1.75 16h12.5A1.75 1.75 0 0016 14.25V1.75A1.75 1.75 0 0014.25 0H1.75zM1.5 1.75a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25v12.5a.25.25 0 01-.25.25H1.75a.25.25 0 01-.25-.25V1.75zM11.75 3a.75.75 0 00-.75.75v7.5a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75zm-8.25.75a.75.75 0 011.5 0v5.5a.75.75 0 01-1.5 0v-5.5zM8 3a.75.75 0 00-.75.75v3.5a.75.75 0 001.5 0v-3.5A.75.75 0 008 3z">
                   </path>
@@ -122,8 +127,7 @@
           <div class="navtab-child">
             <a href="#">
               <span class="span-svg">
-                <svg class="octicon octicon-package UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16"
-                  version="1.1" width="16" aria-hidden="true">
+                <svg class="hide-sm" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true">
                   <path fill-rule="evenodd"
                     d="M8.878.392a1.75 1.75 0 00-1.756 0l-5.25 3.045A1.75 1.75 0 001 4.951v6.098c0 .624.332 1.2.872 1.514l5.25 3.045a1.75 1.75 0 001.756 0l5.25-3.045c.54-.313.872-.89.872-1.514V4.951c0-.624-.332-1.2-.872-1.514L8.878.392zM7.875 1.69a.25.25 0 01.25 0l4.63 2.685L8 7.133 3.245 4.375l4.63-2.685zM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432L2.5 5.677zm6.25 8.271l4.625-2.683a.25.25 0 00.125-.216V5.677L8.75 8.432v5.516z">
                   </path>
@@ -139,22 +143,26 @@
     <div class="main">
       <div class="container">
         <div class="columns">
-          <div class="md-col-3">
+          <div class="full-width md-col-3 order1">
             <div class="sidebar">
               <div class="user-details">
                 <img
                   src="https://avatars1.githubusercontent.com/u/25081005?s=460&u=efa36efcc382444e0ccb4333b64d9ba8b95d6585&v=4"
                   alt="user" />
+                <h1 class="username">Sullivan Wisdom</h1>
               </div>
-              <h1 class="username">Sullivan Wisdom</h1>
+
               <span class="nickname">wiztemple</span>
               <p class="desc">I'd really describe myself as a person with a versatile skill-set, a lot of integrity and
                 a willingness to go the extra mile to learn a new skill.</p>
-              <button class="button">Edit Profile</button>
             </div>
           </div>
-          <div class="md-col-9">
+          <div class="full-width md-col-9 order2">
             <div class="main-wrapper">
+              <div class="search-bar">
+                <input class="input search" placeholder="Find a repository" />
+              </div>
+              <span>124 results for <b>public</b> repositories</span>
               <div class="repository-content" id="repositoryContent">
 
                 <!-- <div class="repository border-bottom">
