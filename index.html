@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>BuyCoin Africa Frontend Challenge</title>
+</head>
+
+<body>
+  <div class="app">
+    <nav class="nav">
+      <div class="container-fluid">
+        <div class="nav-mobile">
+          <div class="nav-brand">
+            <a href="/">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.9844 2.98047C10.3242 2.97656 2.5 10.7969 2.5 20.4492C2.5 28.082 7.39453 34.5703 14.2109 36.9531C15.1289 37.1836 14.9883 36.5312 14.9883 36.0859V33.0586C9.6875 33.6797 9.47266 30.1719 9.11719 29.5859C8.39844 28.3594 6.69922 28.0469 7.20703 27.4609C8.41406 26.8398 9.64453 27.6172 11.0703 29.7227C12.1016 31.25 14.1133 30.9922 15.1328 30.7383C15.3555 29.8203 15.832 29 16.4883 28.3633C10.9961 27.3789 8.70703 24.0273 8.70703 20.043C8.70703 18.1094 9.34375 16.332 10.5938 14.8984C9.79688 12.5352 10.668 10.5117 10.7852 10.2109C13.0547 10.0078 15.4141 11.8359 15.5977 11.9805C16.8867 11.6328 18.3594 11.4492 20.0078 11.4492C21.6641 11.4492 23.1406 11.6406 24.4414 11.9922C24.8828 11.6563 27.0703 10.0859 29.1797 10.2773C29.293 10.5781 30.1445 12.5547 29.3945 14.8867C30.6602 16.3242 31.3047 18.1172 31.3047 20.0547C31.3047 24.0469 29 27.4023 23.4922 28.3711C23.9639 28.835 24.3385 29.3883 24.5941 29.9987C24.8496 30.609 24.981 31.2641 24.9805 31.9258V36.3203C25.0117 36.6719 24.9805 37.0195 25.5664 37.0195C32.4844 34.6875 37.4648 28.1523 37.4648 20.4531C37.4648 10.7969 29.6367 2.98047 19.9844 2.98047V2.98047Z"
+                  fill="white" />
+              </svg>
+
+            </a>
+          </div>
+          <div>
+            <button class=" nav-menu-button">
+              <svg class="nav-menu-hamburger" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <title>Menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="nav-menu">
+          <div class="nav-left">
+            <a href="#" class="nav-link">
+              Pull Requests
+            </a>
+            <a href="#" class="nav-link">
+              Issues
+            </a>
+            <a href="#" class="nav-link">
+              Marketplace
+            </a>
+            <a href="#" class="nav-link">
+              Explore
+            </a>
+          </div>
+          <div class="nav-right">
+            <!-- <div class="nav-item">Kraft Alpha is out!</div> -->
+            <a href="#" class="nav-link">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.25 11.125C16.375 11.875 16.5 12.5 16.75 13.25L17.5 15.375L16.875 16.25H12.5C12.5 16.875 12.25 17.5 11.75 18C11.25 18.5 10.625 18.75 10 18.75C9.375 18.75 8.625 18.5 8.25 18C7.75 17.5 7.5 16.875 7.5 16.25H3.125L2.5 15.375L3.25 13.25C3.5 12.25 3.75 11.25 3.75 10.25V7.5C3.75 6.625 3.875 5.75 4.25 5C4.625 4.125 5.125 3.5 5.75 2.875C6.375 2.25 7.125 1.875 8 1.625C8.625 1.375 9.375 1.25 10 1.25C9.75 1.625 9.5 2.125 9.25 2.625C9 2.625 8.75 2.625 8.375 2.875C7.75 3 7.125 3.375 6.625 3.875C6.125 4.25 5.625 4.875 5.375 5.5C5.125 6.125 5 6.75 5 7.5V10.25C5 11.375 4.75 12.5 4.5 13.625L4 15H16L15.5 13.625C15.2812 12.9675 15.1575 12.2125 15.0462 11.5325L15 11.25C15.5 11.25 15.875 11.25 16.25 11.125ZM10 17.5C10.25 17.5 10.625 17.375 10.875 17.125C11.125 16.875 11.25 16.625 11.25 16.25H8.75C8.75 16.625 8.875 16.875 9.125 17.125C9.375 17.375 9.75 17.5 10 17.5ZM18.75 5C18.75 5.99456 18.3549 6.94839 17.6517 7.65165C16.9484 8.35491 15.9946 8.75 15 8.75C14.0054 8.75 13.0516 8.35491 12.3483 7.65165C11.6451 6.94839 11.25 5.99456 11.25 5C11.25 4.00544 11.6451 3.05161 12.3483 2.34835C13.0516 1.64509 14.0054 1.25 15 1.25C15.9946 1.25 16.9484 1.64509 17.6517 2.34835C18.3549 3.05161 18.75 4.00544 18.75 5V5Z"
+                  fill="#54a3ff" />
+              </svg>
+            </a>
+            <a href="#" class="nav-link">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.9329 0H7.06662C7.1674 0 7.21778 0.0481481 7.21778 0.144444V12.8556C7.21778 12.9519 7.1674 13 7.06662 13H5.9329C5.83213 13 5.78174 12.9519 5.78174 12.8556V0.144444C5.78174 0.0481481 5.83213 0 5.9329 0Z"
+                  fill="#fff" />
+                <path
+                  d="M0.151163 5.81396H12.8488C12.9496 5.81396 13 5.86211 13 5.95841V7.04174C13 7.13804 12.9496 7.18619 12.8488 7.18619H0.151163C0.0503876 7.18619 0 7.13804 0 7.04174V5.95841C0 5.86211 0.0503876 5.81396 0.151163 5.81396Z"
+                  fill="#fff" />
+              </svg>
+            </a>
+            <a href="#" class="nav-link nav-image">
+              <img src="https://avatars0.githubusercontent.com/u/25081005?s=60&v=4" alt="user" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="secondary-nav">
+      <div class="container">
+        <div class="navtab">
+          <div class="navtab-child">
+            <a href="#">
+              <span class="span-svg">
+                <svg class="octicon octicon-book UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16"
+                  version="1.1" width="16" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M0 1.75A.75.75 0 01.75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0111.006 1h4.245a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75h-4.507a2.25 2.25 0 00-1.591.659l-.622.621a.75.75 0 01-1.06 0l-.622-.621A2.25 2.25 0 005.258 13H.75a.75.75 0 01-.75-.75V1.75zm8.755 3a2.25 2.25 0 012.25-2.25H14.5v9h-3.757c-.71 0-1.4.201-1.992.572l.004-7.322zm-1.504 7.324l.004-5.073-.002-2.253A2.25 2.25 0 005.003 2.5H1.5v9h3.757a3.75 3.75 0 011.994.574z">
+                  </path>
+                </svg>
+              </span>
+              Overview
+            </a>
+          </div>
+          <div class="navtab-child">
+            <a href="#" class="active">
+              <span class="span-svg">
+                <svg class="octicon octicon-repo UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16"
+                  version="1.1" width="16" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
+                  </path>
+                </svg>
+              </span>
+              Repositories
+              <span class="span-count" title="33">33</span>
+            </a>
+          </div>
+          <div class="navtab-child">
+            <a href="#">
+              <span class="span-svg">
+                <svg class="octicon octicon-project UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16"
+                  version="1.1" width="16" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M1.75 0A1.75 1.75 0 000 1.75v12.5C0 15.216.784 16 1.75 16h12.5A1.75 1.75 0 0016 14.25V1.75A1.75 1.75 0 0014.25 0H1.75zM1.5 1.75a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25v12.5a.25.25 0 01-.25.25H1.75a.25.25 0 01-.25-.25V1.75zM11.75 3a.75.75 0 00-.75.75v7.5a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75zm-8.25.75a.75.75 0 011.5 0v5.5a.75.75 0 01-1.5 0v-5.5zM8 3a.75.75 0 00-.75.75v3.5a.75.75 0 001.5 0v-3.5A.75.75 0 008 3z">
+                  </path>
+                </svg>
+              </span>
+              Projects
+              <span class="span-count">33</span>
+            </a>
+          </div>
+          <div class="navtab-child">
+            <a href="#">
+              <span class="span-svg">
+                <svg class="octicon octicon-package UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16"
+                  version="1.1" width="16" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M8.878.392a1.75 1.75 0 00-1.756 0l-5.25 3.045A1.75 1.75 0 001 4.951v6.098c0 .624.332 1.2.872 1.514l5.25 3.045a1.75 1.75 0 001.756 0l5.25-3.045c.54-.313.872-.89.872-1.514V4.951c0-.624-.332-1.2-.872-1.514L8.878.392zM7.875 1.69a.25.25 0 01.25 0l4.63 2.685L8 7.133 3.245 4.375l4.63-2.685zM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432L2.5 5.677zm6.25 8.271l4.625-2.683a.25.25 0 00.125-.216V5.677L8.75 8.432v5.516z">
+                  </path>
+                </svg>
+              </span>
+              Packages
+              <span class="span-count">33</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="container">
+        <div class="columns">
+          <div class="md-col-3">
+            <div class="sidebar">
+              <div class="user-details">
+                <img
+                  src="https://avatars1.githubusercontent.com/u/25081005?s=460&u=efa36efcc382444e0ccb4333b64d9ba8b95d6585&v=4"
+                  alt="user" />
+              </div>
+              <h1 class="username">Sullivan Wisdom</h1>
+              <span class="nickname">wiztemple</span>
+              <p class="desc">I'd really describe myself as a person with a versatile skill-set, a lot of integrity and
+                a willingness to go the extra mile to learn a new skill.</p>
+              <button class="button">Edit Profile</button>
+            </div>
+          </div>
+          <div class="md-col-9">
+            <div class="main-wrapper">
+              <div class="repository-content" id="repositoryContent">
+
+                <!-- <div class="repository border-bottom">
+                  <div class="repository-left">
+                    <h3>
+                      <a href="#">buycoinfechallenge</a>
+                    </h3>
+                    <span>BuyCoin Africa FE Challenge</span>
+                    <div class="repository-details">
+                      <span class="repository-details-child">
+                        <span class="language-color html"></span>
+                        HTML
+                      </span>
+                      <span class="repository-details-child">
+                        <span class="language-color js"></span>
+                        JavaScript
+                      </span>
+                      <span class="repository-details-child starCount">
+                        <span>
+                          <svg aria-label="star" class="octicon octicon-star" viewBox="0 0 16 16" version="1.1"
+                            width="16" height="16" role="img">
+                            <path fill-rule="evenodd"
+                              d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z">
+                            </path>
+                          </svg>
+                        </span>
+                        3
+                      </span>
+                      <span class="repository-details-child forkCount">
+                        <span>
+                          <svg aria-label="fork" class="octicon octicon-repo-forked" viewBox="0 0 16 16" version="1.1"
+                            width="16" height="16" role="img">
+                            <path fill-rule="evenodd"
+                              d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z">
+                            </path>
+                          </svg>
+                        </span>
+                        5
+                      </span>
+                      <span class="repository-details-child">
+                        <span>
+                          <svg class="octicon octicon-law mr-1" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                            aria-hidden="true">
+                            <path fill-rule="evenodd"
+                              d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z">
+                            </path>
+                          </svg>
+                        </span>
+                        MIT License
+                      </span>
+                      <span class="repository-details-child">Updated 2 hours ago</span>
+                    </div>
+                  </div>
+                  <div class="repository-right">
+                    <button class="button stargaze">
+                      <svg class="octicon octicon-star mr-1" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                        aria-hidden="true">
+                        <path fill-rule="evenodd"
+                          d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z">
+                        </path>
+                      </svg>
+                      Stars
+                    </button>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
