@@ -1,18 +1,19 @@
 const respositoryContent = document.getElementById('repositoryContent');
-const GITHUB_TOKEN = "7abb2a3585272c45070f26c852de7c4415fdbbca";
+const GITHUB_TOKEN = "cdca1b167d3815307d804eab2ea9adc7a735a5d9";
 
 fetch('https://api.github.com/graphql', {
   method: 'POST',
   body: JSON.stringify({
-    query: `query { viewer{ repositories(last:20) { totalCount, nodes{nameWithOwner, name, description, forkCount, updatedAt, viewerHasStarred, 
+    query: `query { viewer{ repositories(last:20) { totalCount, nodes{nameWithOwner, name, description, forkCount, stargazerCount updatedAt, viewerHasStarred, 
       primaryLanguage{id, name}, licenseInfo {id, name}}, pageInfo {endCursor, hasNextPage}} } }` }),
   headers: {
-    // Authorization: `Bearer ${GITHUB_TOKEN}`,
+    Authorization: `Bearer ${GITHUB_TOKEN}`,
     'Content-Type': 'application/json',
   },
 })
   .then((res) => res.json())
   .then((data) => {
+    console.log(data)
     data.data.viewer.repositories.nodes.map(repository => (
       respositoryContent.innerHTML += `
     <div class="repository border-bottom">
@@ -28,7 +29,7 @@ fetch('https://api.github.com/graphql', {
           ${repository.primaryLanguage && repository.primaryLanguage.name}
         </span>
         <span class="repository-details-child starCount">
-          <span>
+          <span class="starcount1">
             <svg aria-label="star" viewBox="0 0 16 16" version="1.1"
               width="16" height="16" role="img">
               <path fill-rule="evenodd"
@@ -36,7 +37,7 @@ fetch('https://api.github.com/graphql', {
               </path>
             </svg>
           </span>
-          ${repository && repository.stargazerCount > 0 ? repository.stargazerCount : ""}
+          ${repository ? repository.stargazerCount : ""}
         </span>
         <span class="repository-details-child forkCount">
           <span>
@@ -47,24 +48,24 @@ fetch('https://api.github.com/graphql', {
               </path>
             </svg>
           </span>
-          5
+          ${repository.forkCount}
         </span>
-        <span class="repository-details-child">Updated 2 hours ago</span>
-      </div>
-    </div>
-    <div class="repository-right">
-      <button class="button stargaze">
-        <svg class="octicon octicon-star mr-1" viewBox="0 0 16 16" version="1.1" width="16" height="16"
-          aria-hidden="true">
-          <path fill-rule="evenodd"
-            d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z">
-          </path>
-        </svg>
+        <span class="repository-details-child">${'Updated' + ' ' + new Date(repository.updatedAt).toDateString()}</span >
+      </div >
+    </div >
+      <div class="repository-right">
+        <button class="button stargaze">
+          <svg class="octicon octicon-star mr-1" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+            aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z">
+            </path>
+          </svg>
         Stars
       </button>
-    </div>
-  </div>
-    `
+      </div>
+  </div >
+      `
     ))
 
   }
