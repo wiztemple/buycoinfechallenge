@@ -7,7 +7,7 @@ fetch('https://api.github.com/graphql', {
     query: `query { viewer{ repositories(last:20) { totalCount, nodes{nameWithOwner, name, description, forkCount, updatedAt, viewerHasStarred, 
       primaryLanguage{id, name}, licenseInfo {id, name}}, pageInfo {endCursor, hasNextPage}} } }` }),
   headers: {
-    Authorization: `Bearer ${GITHUB_TOKEN}`,
+    // Authorization: `Bearer ${GITHUB_TOKEN}`,
     'Content-Type': 'application/json',
   },
 })
